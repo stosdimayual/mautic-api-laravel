@@ -1,0 +1,43 @@
+{
+    "name": "yual/mautic-api-laravel",
+    "description": "Wrapper on the Mautic API for Laravel 4/5.x",
+    "keywords": [
+        "laravel",
+        "mautic",
+        "api",
+        "automation",
+        "email",
+        "marketing"
+    ],
+    "license": "MIT",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/Rocksheep/api-library"
+        }
+    ],
+    "require": {
+        "php": ">= 8.0",
+        "laravel/framework": "^5.7|^6|^7|^8|^9|^10",
+        "mautic/api-library": "dev-main"
+    },
+    "autoload": {
+        "psr-4": {
+            "Gentor\\Mautic\\": "src/"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Gentor\\Mautic\\MauticServiceProvider"
+            ],
+            "aliases": {
+                "Mautic": "Gentor\\Mautic\\Facades\\Mautic"
+            }
+        }
+    },
+    "minimum-stability": "dev"
+}
